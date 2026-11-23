@@ -179,6 +179,38 @@ section {
     box-shadow: 3px 3px 0 var(--ink);
 }
 
+.circle-btn {
+    width: 88px;
+    height: 88px;
+    margin: 34px 0 0 auto;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    color: var(--white);
+    background: var(--blue);
+    font-size: 0.72rem;
+    font-weight: 900;
+    line-height: 1.05;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: background 180ms ease;
+}
+
+.circle-btn b {
+    display: none;
+}
+
+.circle-btn:hover {
+    background: var(--coral);
+}
+
+.circle-btn:active {
+    background: var(--ink);
+}
+
 .home-image {
     position: relative;
     isolation: isolate;
