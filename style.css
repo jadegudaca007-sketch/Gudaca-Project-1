@@ -59,6 +59,31 @@ nav {
     justify-content: space-between;
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    color: var(--ink);
+    background: var(--mint);
+    font-size: 1.35rem;
+    cursor: pointer;
+    transition: background 180ms ease, transform 180ms ease;
+}
+
+.theme-toggle:hover {
+    background: var(--coral);
+    transform: rotate(12deg);
+}
+
 .menu-toggle {
     width: 44px;
     height: 44px;
@@ -428,6 +453,64 @@ footer {
     background: var(--ink);
     font-size: 0.86rem;
     letter-spacing: 0.06em;
+}
+
+body.dark-mode {
+    --ink: #f3efe5;
+    --paper: #151b26;
+    --white: #252e3d;
+    --blue: #6f8aff;
+    --coral: #ff9778;
+    --mint: #27443d;
+    --line: rgba(243, 239, 229, 0.16);
+    background:
+        radial-gradient(circle at 88% 8%, rgba(39, 68, 61, 0.65), transparent 18rem),
+        var(--paper);
+}
+
+body.dark-mode header {
+    background: rgba(21, 27, 38, 0.94);
+}
+
+body.dark-mode .home-content p {
+    color: #c5cad4;
+}
+
+body.dark-mode .skills {
+    color: #f3efe5;
+    background: #0c111a;
+}
+
+body.dark-mode .skills .section-title,
+body.dark-mode .contact,
+body.dark-mode .contact .section-title,
+body.dark-mode footer {
+    color: #f3efe5;
+}
+
+body.dark-mode .skill-list span,
+body.dark-mode .circle-btn {
+    color: #f3efe5;
+}
+
+body.dark-mode .project-card:nth-child(1) {
+    background: #243d37;
+}
+
+body.dark-mode .project-card:nth-child(2) {
+    background: #49302c;
+}
+
+body.dark-mode .project-card:nth-child(3) {
+    background: #2b3455;
+}
+
+body.dark-mode .project-card p {
+    color: #d7dbe3;
+}
+
+body.dark-mode footer {
+    background: #0c111a;
 }
 
 @media (max-width: 760px) {
