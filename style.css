@@ -478,7 +478,7 @@ body.dark-mode .home-content p {
 
 body.dark-mode .skills {
     color: #f3efe5;
-    background: #0c111a;
+    background: #171f2d;
 }
 
 body.dark-mode .skills .section-title,
@@ -488,9 +488,14 @@ body.dark-mode footer {
     color: #f3efe5;
 }
 
-body.dark-mode .skill-list span,
 body.dark-mode .circle-btn {
     color: #f3efe5;
+}
+
+body.dark-mode .skill-list span {
+    border-color: #53617a;
+    color: #ffffff;
+    background: #252f41;
 }
 
 body.dark-mode .project-card:nth-child(1) {
