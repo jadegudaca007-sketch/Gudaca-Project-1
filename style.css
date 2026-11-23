@@ -285,20 +285,6 @@ section {
     background: rgba(255, 255, 255, 0.04);
     font-weight: 900;
     text-align: center;
-    transform: translateY(0);
-    transition: 180ms ease;
-}
-
-.skill-list span:nth-child(odd):hover {
-    color: var(--ink);
-    background: var(--mint);
-    transform: translateY(-8px);
-}
-
-.skill-list span:nth-child(even):hover {
-    color: var(--ink);
-    background: var(--coral);
-    transform: translateY(-8px);
 }
 
 .project-container {
