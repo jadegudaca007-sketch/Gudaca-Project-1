@@ -16,7 +16,13 @@
         <nav>
             <h2 class="logo">JADE.</h2>
 
-            <ul>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="site-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -108,5 +114,24 @@
         <p>&copy; 2026 Jade Gudaca. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const siteMenu = document.querySelector("#site-menu");
+
+        menuToggle.addEventListener("click", () => {
+            const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+            menuToggle.setAttribute("aria-label", isExpanded ? "Open navigation menu" : "Close navigation menu");
+            siteMenu.classList.toggle("menu-open", !isExpanded);
+        });
+
+        siteMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                siteMenu.classList.remove("menu-open");
+            });
+        });
+    </script>
 </body>
 </html>
